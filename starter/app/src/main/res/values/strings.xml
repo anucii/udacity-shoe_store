@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <string name="email_label">E-mail</string>
+    <string name="password_label">Password</string>
+    <string name="signup_button_text">Sign Up</string>
+    <string name="login_button_text">Log In</string>
+    <string name="welcome_title">Shoes Online Store</string>
+    <string name="welcome_teaser">Exclusive brand new offers every week. Make the best deals.</string>
+    <string name="welcome_to_instructions">How do I do that?</string>
+    <string name="instruction_title">How To</string>
+    <string name="instruction_description">
+        Once in the shoe list, scroll until you reach an interesting offer. Then tap the "View Details" button.
+    </string>
+    <string name="instruction_to_shoelist">Choose Shoes Now</string>
+    <string name="shoelist_to_detail">View Details</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
