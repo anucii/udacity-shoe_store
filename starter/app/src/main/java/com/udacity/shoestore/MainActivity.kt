@@ -30,12 +30,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onSupportNavigateUp(): Boolean {
         super.onSupportNavigateUp()
-        return navController?.navigateUp()
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_logout, menu)
-        return super.onCreateOptionsMenu(menu)
+        return navController.navigateUp()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
