@@ -7,6 +7,7 @@
     <string name="detail_label">Shoe Entry</string>
     <string name="email_label">E-mail</string>
     <string name="password_label">Password</string>
+    <string name="logout_text">Log Out</string>
     <string name="signup_button_text">Sign Up</string>
     <string name="login_button_text">Log In</string>
     <string name="welcome_title">Shoes Inventory</string>
