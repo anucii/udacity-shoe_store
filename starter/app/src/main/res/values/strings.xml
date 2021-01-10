@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <string name="login_label">Login</string>
+    <string name="welcome_label">Welcome !</string>
+    <string name="instruction_label">How To ?</string>
+    <string name="shoelist_label">Shoe Store Inventory</string>
+    <string name="detail_label">Shoe Entry</string>
     <string name="email_label">E-mail</string>
     <string name="password_label">Password</string>
     <string name="signup_button_text">Sign Up</string>
@@ -7,7 +12,7 @@
     <string name="welcome_title">Shoes Inventory</string>
     <string name="welcome_teaser">Shoe Store Inventory : never lose track of your Shoe models again.</string>
     <string name="welcome_to_instructions">How do I do that?</string>
-    <string name="instruction_title">How To</string>
+    <string name="instruction_title">Shoe Inventory 101</string>
     <string name="instruction_description">
         Go the Shoes Inventory screen. Then tap the add button to record a new model.
     </string>

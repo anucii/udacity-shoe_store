@@ -24,4 +24,9 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         Timber.plant(Timber.DebugTree())
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        super.onSupportNavigateUp()
+        return navController?.navigateUp()
+    }
 }
