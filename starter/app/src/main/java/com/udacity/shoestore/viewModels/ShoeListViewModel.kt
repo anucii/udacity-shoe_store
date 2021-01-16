@@ -12,6 +12,10 @@ class ShoeListViewModel : ViewModel() {
         get() = _shoeList
 
     init {
-        _shoeList.value = mutableListOf()
+        _shoeList.value = mutableListOf(
+            Shoe("Demo One", 41.0, "Demo Makers", ""),
+            Shoe("Demo One Jr", 34.0, "Demo Makers", ""),
+            Shoe("Demo Two", 37.5, "Demo Makers", "")
+        )
     }
 }
