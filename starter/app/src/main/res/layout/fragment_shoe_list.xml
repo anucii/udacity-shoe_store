@@ -14,10 +14,11 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/shoelist_list"
+            android:id="@+id/shoe_items_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/shoelist_to_detail"
                 android:layout_width="match_parent"
