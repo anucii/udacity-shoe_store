@@ -6,7 +6,9 @@
     <string name="shoelist_label">Shoe Store Inventory</string>
     <string name="detail_label">Shoe Entry</string>
     <string name="email_label">E-mail</string>
+    <string name="email_hint">e.g.: myname@myhost.domain</string>
     <string name="password_label">Password</string>
+    <string name="password_hint">e.g : S0undP4$$w0rd</string>
     <string name="logout_text">Log Out</string>
     <string name="signup_button_text">Sign Up</string>
     <string name="login_button_text">Log In</string>

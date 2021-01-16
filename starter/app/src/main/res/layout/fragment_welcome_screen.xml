@@ -13,6 +13,7 @@
 
         <TextView
             android:id="@+id/textView"
+            style="@style/headingText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/welcome_title" />
@@ -21,13 +22,19 @@
             android:id="@+id/welcome_teaser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/descriptionBlock"
             android:text="@string/welcome_teaser" />
 
-        <Button
-            android:id="@+id/welcome_to_instructions"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/welcome_to_instructions" />
+        <LinearLayout
+            android:orientation="vertical"
+            style="@style/buttonNavigationLayout">
+            <Button
+                android:id="@+id/welcome_to_instructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_to_instructions" />
+        </LinearLayout>
+
     </LinearLayout>
 
 

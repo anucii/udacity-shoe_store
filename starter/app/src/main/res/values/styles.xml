@@ -16,4 +16,37 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="headingText">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="labelText">
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:inputType">textCapWords</item>
+    </style>
+
+    <style name="valueText">
+        <item name="android:textAlignment">textEnd</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:inputType">textCapWords</item>
+    </style>
+
+    <style name="descriptionBlock">
+        <item name="android:padding">16dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:inputType">textCapSentences|textMultiLine</item>
+    </style>
+
+    <style name="buttonNavigationLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">bottom</item>
+    </style>
+
 </resources>

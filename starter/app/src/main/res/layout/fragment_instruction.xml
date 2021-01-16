@@ -15,19 +15,25 @@
             android:id="@+id/instruction_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/headingText"
             android:text="@string/instruction_title" />
 
         <TextView
             android:id="@+id/instruction_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/descriptionBlock"
             android:text="@string/instruction_description" />
 
-        <Button
-            android:id="@+id/instruction_to_shoelist"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/instruction_to_shoelist" />
+        <LinearLayout
+            style="@style/buttonNavigationLayout">
+            <Button
+                android:id="@+id/instruction_to_shoelist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/instruction_to_shoelist" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </layout>

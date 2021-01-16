@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.FOCUS_DOWN
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
@@ -44,7 +45,6 @@ class shoeDetailFragment : Fragment() {
             addShoeToList(binding)
             it.findNavController().navigate(shoeDetailToListAction)
         }
-        binding.shoeNameEdit.requestFocus()
         return binding.root
     }
 
