@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="detailModel"
+            type="com.udacity.shoestore.viewModels.ShoeViewModel" />
     </data>
 
     <LinearLayout
@@ -30,7 +32,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:text="@={detailModel.shoeName}"/>
         </LinearLayout>
 
         <LinearLayout
@@ -52,7 +55,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:text="@={detailModel.shoeCompany}"/>
         </LinearLayout>
 
         <LinearLayout
@@ -74,7 +78,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="number" />
+                android:inputType="number"
+                android:text="@={detailModel.shoeSize}"
+                android:selectAllOnFocus="true"/>
         </LinearLayout>
 
         <LinearLayout

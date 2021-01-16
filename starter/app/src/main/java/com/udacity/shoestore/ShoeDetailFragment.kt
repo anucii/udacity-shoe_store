@@ -12,6 +12,7 @@ import androidx.navigation.findNavController
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
 import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.viewModels.ShoeListViewModel
+import com.udacity.shoestore.viewModels.ShoeViewModel
 import kotlinx.android.synthetic.main.fragment_shoe_detail.view.*
 
 /**
@@ -37,6 +38,7 @@ class shoeDetailFragment : Fragment() {
             R.layout.fragment_shoe_detail,
             container,
             false)
+        binding.detailModel = ShoeViewModel()
         val shoeDetailToListAction = shoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment()
         binding.shoedetailCancel.setOnClickListener(){
             it.findNavController().navigate(shoeDetailToListAction)
@@ -49,12 +51,12 @@ class shoeDetailFragment : Fragment() {
     }
 
     private fun addShoeToList(it: FragmentShoeDetailBinding) {
-        val name = it.shoeNameEdit.text.toString()
-        if (name.isBlank()) { return }
-        val company = it.shoeCompanyEdit.text.toString()
-        val size : Double = it.shoeSizeEdit.text.toString().toDoubleOrNull() ?: 0.0
-        val shoe = Shoe(name, size, company, "")
-        model.shoeList.value?.add(shoe)
+        val name = it.detailModel?.getShoeName()
+        if (name.isNullOrBlank()) { return }
+        val shoe = it.detailModel?.newShoe?.value
+        if (shoe != null){
+            model.shoeList.value?.add(shoe)
+        }
     }
 
     companion object {
