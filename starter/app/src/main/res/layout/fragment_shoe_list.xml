@@ -9,6 +9,12 @@
             type="com.udacity.shoestore.viewModels.ShoeListViewModel" />
     </data>
 
+    <!--
+    The top-level layout here is a ScrollView, as required by the project instructions.
+    Its inner container, which has to host a dynamic list of detail views, was a perfect
+    match for a vertically oriented LinearLayout.
+    -->
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">

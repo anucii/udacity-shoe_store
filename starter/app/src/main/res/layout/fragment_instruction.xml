@@ -6,6 +6,12 @@
 
     </data>
 
+    <!--
+    The instruction screen, with its quite flat content hierarchy (a title,
+    a description and a navigation button), totally fits with the purposes
+    of a LinearLayout.
+    -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

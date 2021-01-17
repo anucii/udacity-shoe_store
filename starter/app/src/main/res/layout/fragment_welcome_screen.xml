@@ -6,6 +6,13 @@
 
     </data>
 
+    <!--
+    As for the login screen, there is no special complexity in the
+    contents hierarchy.
+    Setting a vertical LinearLayout lets the title, presentation text
+    and navigation button be presented in a vertical stack whose
+    semantics relies only on the styles applied to the different items.
+    -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

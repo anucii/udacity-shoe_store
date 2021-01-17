@@ -7,6 +7,11 @@
 
     </data>
 
+    <!--
+    The main activity layout, with its two items (toolbar and fragment container),
+    has a inherently flat hierarchy, which makes it a perfect match for a LinearLayout
+    -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -6,6 +6,12 @@
 
     </data>
 
+    <!--
+    The login screen implies no complex hierarchy between its different items.
+    The only nesting is the one involving the bottom button bar.
+    The most obvious choice for such a setting was to use a vertical LinearLayout,
+    which would let me align my items vertically in a responsive and stable way.
+    -->
     <LinearLayout
         android:id="@+id/login_layout"
         android:layout_width="match_parent"

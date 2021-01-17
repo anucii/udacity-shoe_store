@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
     </data>
 
-    <LinearLayout
+    <!--
+    As for fragment_shoe_detail layout, the main issue with the shoe item layout
+    (which is replicated dynamically within the LinearLayout container of the ShoeList
+    screen) is to ensure its consistency while avoiding to create overcrafted nesting
+    structures.
+    Hence the choice of a ConstraintLayout, which will enable a consistent presentation
+    of the six items (three key-value "tuples") within a seemingly flat hierarchy.
+    This choice would hopefully enhance the screen reactivity when provided with many
+    items or with heavier data (for instance with pictures included).
+    -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/shoe_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,61 +29,66 @@
         android:orientation="vertical"
         android:textAlignment="gravity">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+
+        <TextView
+            android:id="@+id/item_name_label"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="6dp"
+            style="@style/labelText"
+            android:text="@string/shoedetail_name_label"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/labelText"
-                android:text="@string/shoedetail_name_label"/>
-            <TextView
-                android:id="@+id/item_name"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                style="@style/valueText"/>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_weight="1"
-                style="@style/labelText"
-                android:text="@string/shoedetail_size_label"/>
-            <TextView
-                android:id="@+id/item_size"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                style="@style/valueText"/>
-        </LinearLayout>
+            android:layout_marginEnd="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/item_name_label"
+            style="@style/valueText"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+
+        <TextView
+            android:id="@+id/item_size_label"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                style="@style/labelText"
-                android:text="@string/shoedetail_company_label"/>
-            <TextView
-                android:id="@+id/item_company"
-                android:layout_height="wrap_content"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                style="@style/valueText"/>
-        </LinearLayout>
+            android:layout_width="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="0dp"
+            style="@style/labelText"
+            app:layout_constraintTop_toBottomOf="@+id/item_name_label"
+            app:layout_constraintStart_toStartOf="@+id/item_name_label"
+            android:text="@string/shoedetail_size_label"/>
+        <TextView
+            android:id="@+id/item_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            app:layout_constraintEnd_toEndOf="@+id/item_name"
+            app:layout_constraintBaseline_toBaselineOf="@+id/item_size_label"
+            style="@style/valueText"/>
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/item_company_label"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="0dp"
+            style="@style/labelText"
+            app:layout_constraintStart_toStartOf="@+id/item_size_label"
+            app:layout_constraintTop_toBottomOf="@+id/item_size_label"
+            android:text="@string/shoedetail_company_label"/>
+        <TextView
+            android:id="@+id/item_company"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="0dp"
+            app:layout_constraintEnd_toEndOf="@+id/item_size"
+            app:layout_constraintBaseline_toBaselineOf="@+id/item_company_label"
+            style="@style/valueText"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
